@@ -1,0 +1,38 @@
+Filter reports generated from bluesombrero.
+
+Specify bluesom report file using -m
+Specify a filter file consisting of names using the -f option
+
+Ex. filter file content:
+Neil Barber
+Dave Smith
+Barney Rubble
+
+master file of volunteers with the following assumptions...
+field 1:  division
+field 4:  first name
+field 5:  last name
+field 11: email
+field 13: cell phone
+field 15: background check status
+field 16: verification status
+field 18: AYSO ID
+
+Ex:
+"Program Name","Division Name","Team Name","Volunteer Role","Volunteer First Name","Volunteer Last Name","Volunteer Street Address","Volunteer Address Unit","Volunteer City","Volunteer State","Volunteer Postal Code","Volunteer Email Address","Volunteer Telephone","Volunteer Cell Phone","Volunteer Other Phone","Volunteer Background Check Status","Volunteer Verification Status","Volunteer SignUp Date","AYSO Volunteer AYSO ID","No Sunday Games","Did play Region 2 last year?","Parent Volunteer","AYSO Membership Fee Information","Physician Name","Physician Telephone","Height","Weight","Authorization, Disclaimer, Assumption of Risk and Waiver and Consent Agreements"
+
+
+master file of players with the following assumptions
+field 2:  primary parent first name
+field 3:  primary parent last name
+field 4:  player first name
+field 5:  player last name
+field 11: email
+field 13: cell phone
+field 23: AYSO ID
+
+Ex:
+"Program Name","Division Name","Account First Name","Account Last Name","Player First Name","Player Last Name","Street Address","Unit","City","State","Postal Code","Users Email","Telephone","Cellphone","Other Phone","Team Name","Order Date","Order No","Order Detail Description","OrderItem Amount","OrderItem Amount Paid","OrderItem Balance","Orders Order Payment Status","AYSO Player AYSO ID","Birth Date","Gender"
+
+./reportfilter.py -f in -m players.csv --type=player
+./reportfilter.py -f in -m vols.csv --type=vol
